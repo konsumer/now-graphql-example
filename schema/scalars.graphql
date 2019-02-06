@@ -1,0 +1,6 @@
+# thse are shared scalars used throughout app
+
+scalar Json
+scalar DateTime
+scalar Email
+scalar URL

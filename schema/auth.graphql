@@ -1,0 +1,18 @@
+# Auth-related directives & fields
+
+# requires auth0 authentication
+directive @auth on FIELD | FIELD_DEFINITION
+
+type User {
+  nickname: String
+  picture: URL
+  updated_at: DateTime
+  email: Email
+  email_verified: Boolean
+  sub: String
+}
+
+type Query {
+  # Get your current user (for testing auth)
+  me: User @auth
+}
